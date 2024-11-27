@@ -2,10 +2,10 @@
   "name": "node-zero",
   "version": "1.0.0",
   "description": "learning node",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon src/server.js"
   },
   "keywords": [
     "nodejs"
@@ -13,11 +13,9 @@
   "author": "truonghuu478@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "16.0.3",
+    "dotenv": "^16.4.5",
     "ejs": "3.1.8",
-    "express": "4.18.2"
-  },
-  "devDependencies": { // khi deploy sẽ không cài được các libs ở đây
-    "nodemon": "2.0.20"
+    "express": "4.18.2",
+    "nodemon": "^3.1.7"
   }
 }

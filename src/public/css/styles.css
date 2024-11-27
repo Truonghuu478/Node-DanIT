@@ -1,0 +1,13 @@
+.home{
+    width: 100px;
+    height: 100px;
+}
+
+.home h1{
+    color:blue;
+}
+
+.home img{
+    width: 100%;
+    display: block;
+}
