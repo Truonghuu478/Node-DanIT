@@ -1,18 +1,24 @@
 const express = require("express");
-require("dotenv").config();
 const app = express();
+require("dotenv").config();
 
 const configEngine = require("./configs/configEngine");
 const webRouters = require("./routes/web");
+const connection = require("./configs/database");
 
 const PORT = process.env.PORT;
 const hostname = process.env.HOST_NAME;
 
 configEngine(app);
+app.use("/web", webRouters);
+connection.query("SELECT * FROM Users u", (err, result) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(result);
+  }
+});
 
-
-app.use("/web", webRouters)
-app.listen(PORT,hostname,() => {
-    console.log("Server is running",PORT);
-})
-
+app.listen(PORT, hostname, () => {
+  console.log("Server is running", hostname, PORT);
+});

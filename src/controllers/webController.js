@@ -1,5 +1,6 @@
 
 const getHomePage = (req, res)=>{
+   
     //call model
     res.send("Hello Home page");
 }
